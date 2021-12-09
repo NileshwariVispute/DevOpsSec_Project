@@ -12,8 +12,44 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
 	<title>HomePage</title>
 </head>
 
-<body style="background-color:darkcyan">
+<body style="background-color:rgb(115, 196, 196)">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+</style>
+
+
+<!-- <a href="add.html" style="color:white;font-weight:900">Add New Booking</a><br/><br/> -->
+
+<div class="container">
 <a href="add.html" style="color:white;font-weight:900">Add New Booking</a><br/><br/>
+  <img src="img_girl.jpg" alt="Notebook" style="width:100%;">
+  
+  <div class="content">
 
 	<table width='80%' border=0>
     <tbody style="background-color: white; box-shadow: 110px black;border: 1px solid white;padding: 10px;box-shadow: 5px 10px #888888;">
@@ -35,5 +71,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
 	?>
 	</tbody>
 	</table>
+	</div>
+
+</div>
 </body>
 </html>
